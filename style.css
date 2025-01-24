@@ -70,11 +70,11 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-volta 0.3s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: suave 0.4s forwards;
 }
 
 #switch span {
@@ -168,4 +168,21 @@ footer p a {
 
 footer p a:hover {
   color: #2f96d8;
+}
+/* animação */
+@keyframes suave {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-volta {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
